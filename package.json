@@ -2,8 +2,9 @@
   "name": "structure-lib",
   "version": "0.0.1",
   "description": "A library of React components to provide unified style and structure for data-driven React applications",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,23 +24,25 @@
   },
   "homepage": "https://github.com/fearlessforhim/structure-lib#readme",
   "dependencies": {
-    "@babel/preset-react": "^7.16.7",
+    "@fortawesome/fontawesome-free": "^6.1.1",
     "babel-preset-env": "^1.7.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.69.1",
+    "webpack-cli": "^4.9.2"
   },
-  "babel": {
-    "presets": [
-      "@babel/preset-react",
-      "@babel/preset-env"
-    ],
-    "plugins": [
-      "@babel/plugin-transform-react-jsx",
-      "@babel/plugin-syntax-jsx"
-    ]
-  },
+
   "devDependencies": {
     "@babel/core": "^7.17.4",
-    "@babel/preset-env": "^7.16.11"
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "babel-loader": "^8.2.3",
+    "css-loader": "^6.6.0",
+    "file-loader": "^6.2.0",
+    "fs-extra": "^10.0.0",
+    "sass": "^1.49.8",
+    "sass-loader": "^12.6.0",
+    "style-loader": "^3.3.1"
   }
 }
