@@ -1,0 +1,7 @@
+@mixin hv_center {
+  display: flex;
+  box-sizing: border-box;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}

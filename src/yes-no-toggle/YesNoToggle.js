@@ -1,26 +1,36 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './yes-no-toggle.scss'
 
 export default function YesNoToggle(props) {
 
-  let [value, setValue] = useState(props.value || false);
-
   return (
     <div className={'yes-no-toggle-wrap'}>
+    <div
+    className={`selection-indicator-wrap`}
+    >
       <div
-        className={`toggle-off-option ${props.offIcon ? `fa fa-${props.offIcon}` : ``}`}
-      >
-        {props.offText}
-      </div>
+        className={`selection-indicator ${props.value ? `on` : `off`}`}
+      />
+    </div>
       <div
-        className={`toggle-on-option ${props.onIcon ? `fa fa-${props.onIcon}` : ``}`}
+        className={`options-wrap`}
       >
-        {props.onText}
+        <div
+          className={`toggle-option toggle-off`}
+          onClick={() => props.onChange(false)}
+        >
+          {props.offIcon && <span className={`fa ${props.offIcon}`}/>}
+          {props.offText && <span className={`toggle-text`}>{props.offText}</span>}
+        </div>
+        <div
+          className={`toggle-option toggle-on`}
+          onClick={() => props.onChange(true)}
+        >
+          {props.onIcon && <span className={`fa ${props.onIcon}`}/>}
+          {props.onText && <span className={`toggle-text`}>{props.onText}</span>}
+        </div>
       </div>
-      <div
-        className={`selection-indicator ${value ? `on` : `off`}`}
-      >
-      </div>
+
     </div>
   );
 }

@@ -1,7 +1,7 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 711:
+/***/ 26:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -10,12 +10,14 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "Button": () => (/* reexport */ Button)
+  "Button": () => (/* reexport */ Button),
+  "Tabs": () => (/* reexport */ Tabs),
+  "YesNoToggle": () => (/* reexport */ YesNoToggle)
 });
 
-;// CONCATENATED MODULE: external "react"
-const external_react_namespaceObject = require("react");
-var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_namespaceObject);
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__(497);
+var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
 // EXTERNAL MODULE: ../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js
 var injectStylesIntoStyleTag = __webpack_require__(892);
 var injectStylesIntoStyleTag_default = /*#__PURE__*/__webpack_require__.n(injectStylesIntoStyleTag);
@@ -71,10 +73,146 @@ var update = injectStylesIntoStyleTag_default()(cjs_js_button_button/* default *
 function Button(props) {
   return /*#__PURE__*/external_react_default().createElement("div", {
     className: 'the-div'
-  }, "BUTTON");
+  });
+}
+// EXTERNAL MODULE: ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./yes-no-toggle/yes-no-toggle.scss
+var yes_no_toggle = __webpack_require__(277);
+;// CONCATENATED MODULE: ./yes-no-toggle/yes-no-toggle.scss
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var yes_no_toggle_options = {};
+
+yes_no_toggle_options.styleTagTransform = (styleTagTransform_default());
+yes_no_toggle_options.setAttributes = (setAttributesWithoutAttributes_default());
+
+      yes_no_toggle_options.insert = insertBySelector_default().bind(null, "head");
+    
+yes_no_toggle_options.domAPI = (styleDomAPI_default());
+yes_no_toggle_options.insertStyleElement = (insertStyleElement_default());
+
+var yes_no_toggle_update = injectStylesIntoStyleTag_default()(yes_no_toggle/* default */.Z, yes_no_toggle_options);
+
+
+
+
+       /* harmony default export */ const yes_no_toggle_yes_no_toggle = (yes_no_toggle/* default */.Z && yes_no_toggle/* default.locals */.Z.locals ? yes_no_toggle/* default.locals */.Z.locals : undefined);
+
+;// CONCATENATED MODULE: ./yes-no-toggle/YesNoToggle.js
+
+
+function YesNoToggle(props) {
+  return /*#__PURE__*/external_react_default().createElement("div", {
+    className: 'yes-no-toggle-wrap'
+  }, /*#__PURE__*/external_react_default().createElement("div", {
+    className: "selection-indicator-wrap"
+  }, /*#__PURE__*/external_react_default().createElement("div", {
+    className: "selection-indicator ".concat(props.value ? "on" : "off")
+  })), /*#__PURE__*/external_react_default().createElement("div", {
+    className: "options-wrap"
+  }, /*#__PURE__*/external_react_default().createElement("div", {
+    className: "toggle-option toggle-off",
+    onClick: function onClick() {
+      return props.onChange(false);
+    }
+  }, props.offIcon && /*#__PURE__*/external_react_default().createElement("span", {
+    className: "fa ".concat(props.offIcon)
+  }), props.offText && /*#__PURE__*/external_react_default().createElement("span", {
+    className: "toggle-text"
+  }, props.offText)), /*#__PURE__*/external_react_default().createElement("div", {
+    className: "toggle-option toggle-on",
+    onClick: function onClick() {
+      return props.onChange(true);
+    }
+  }, props.onIcon && /*#__PURE__*/external_react_default().createElement("span", {
+    className: "fa ".concat(props.onIcon)
+  }), props.onText && /*#__PURE__*/external_react_default().createElement("span", {
+    className: "toggle-text"
+  }, props.onText))));
+}
+// EXTERNAL MODULE: ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./tabs/tabs.scss
+var tabs = __webpack_require__(791);
+;// CONCATENATED MODULE: ./tabs/tabs.scss
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var tabs_options = {};
+
+tabs_options.styleTagTransform = (styleTagTransform_default());
+tabs_options.setAttributes = (setAttributesWithoutAttributes_default());
+
+      tabs_options.insert = insertBySelector_default().bind(null, "head");
+    
+tabs_options.domAPI = (styleDomAPI_default());
+tabs_options.insertStyleElement = (insertStyleElement_default());
+
+var tabs_update = injectStylesIntoStyleTag_default()(tabs/* default */.Z, tabs_options);
+
+
+
+
+       /* harmony default export */ const tabs_tabs = (tabs/* default */.Z && tabs/* default.locals */.Z.locals ? tabs/* default.locals */.Z.locals : undefined);
+
+;// CONCATENATED MODULE: ./tabs/Tabs.js
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+function Tabs(props) {
+  var _useState = (0,external_react_.useState)(props.tabs[0].key),
+      _useState2 = _slicedToArray(_useState, 2),
+      selectedTabKey = _useState2[0],
+      setSelectedTabKey = _useState2[1];
+
+  return /*#__PURE__*/external_react_default().createElement("div", {
+    className: 'structure-lib-tabs-wrap'
+  }, /*#__PURE__*/external_react_default().createElement("div", {
+    className: "structure-lib-tabs-header-wrap"
+  }, props.tabs.map(function (t) {
+    return /*#__PURE__*/external_react_default().createElement("div", {
+      key: t.key,
+      className: "tab-item"
+    }, t.title);
+  })), /*#__PURE__*/external_react_default().createElement("div", {
+    className: "structure-lib-tabs-content-wrap"
+  }, props.tabs.filter(function (t) {
+    return t.key === selectedTabKey;
+  })[0].component));
 }
 ;// CONCATENATED MODULE: ./index.js
 
+
+
+window.React2 = __webpack_require__(497);
+console.log(window.React1 === window.React2);
+console.log(window.React1);
+console.log(window.React2);
 
 
 /***/ }),
@@ -96,6 +234,52 @@ function Button(props) {
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, "", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ 791:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(933);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(476);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ 277:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(933);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(476);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".yes-no-toggle-wrap{border:1px solid var(--primary-color);padding:2px;position:relative;height:30px}.yes-no-toggle-wrap .options-wrap{display:flex;position:absolute;top:0;left:0;right:0;bottom:0}.yes-no-toggle-wrap .options-wrap .toggle-option{flex:1;cursor:pointer;display:flex;box-sizing:border-box;text-align:center;justify-content:center;align-items:center}.yes-no-toggle-wrap .options-wrap .toggle-option .toggle-text{margin-left:10px;display:inline-block}.yes-no-toggle-wrap .selection-indicator-wrap{width:100%;height:100%;position:relative}.yes-no-toggle-wrap .selection-indicator-wrap .selection-indicator{position:absolute;height:100%;left:0;right:50%;background:var(--primary-color-light);transition:left 350ms,right 350ms}.yes-no-toggle-wrap .selection-indicator-wrap .selection-indicator.on{left:50%;right:0}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1249,6 +1433,14 @@ function styleTagTransform(css, styleElement) {
 
 module.exports = styleTagTransform;
 
+/***/ }),
+
+/***/ 497:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react");
+
 /***/ })
 
 /******/ 	});
@@ -1324,7 +1516,7 @@ module.exports = styleTagTransform;
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module is referenced by other modules so it can't be inlined
 /******/ 	__webpack_require__(248);
-/******/ 	var __webpack_exports__ = __webpack_require__(711);
+/******/ 	var __webpack_exports__ = __webpack_require__(26);
 /******/ 	module.exports = __webpack_exports__;
 /******/ 	
 /******/ })()

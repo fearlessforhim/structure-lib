@@ -1,3 +1,48 @@
-.yes-no-toggle-wrap {
+@import "src/_bits/_mixins";
 
+.yes-no-toggle-wrap {
+  border: 1px solid var(--primary-color);
+  padding: 2px;
+  position: relative;
+  height: 30px;
+
+  .options-wrap {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    .toggle-option {
+      flex: 1;
+      cursor: pointer;
+      @include hv_center();
+
+      .toggle-text {
+        margin-left: 10px;
+        display: inline-block;
+      }
+    }
+  }
+
+  .selection-indicator-wrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    .selection-indicator {
+      position: absolute;
+      height: 100%;
+      left: 0;
+      right: 50%;
+      background: var(--primary-color-light);
+      transition: left 350ms, right 350ms;
+
+      &.on {
+        left: 50%;
+        right: 0;
+      }
+    }
+  }
 }
