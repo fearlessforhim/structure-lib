@@ -1,0 +1,74 @@
+@import "src/_bits/_mixins";
+
+.structure-lib-button-wrap {
+  background: var(--primary-color, orange);
+  box-shadow: 0 -3px 0 var(--primary-color-extra-dark, orange) inset;
+  color: white;
+  height: 30px;
+  display: inline-block;
+  cursor: pointer;
+  transition: box-shadow 1s;
+
+  &:hover {
+    background: var(--primary-color-extra-dark, orange);
+  }
+
+  &.full-width {
+    width: 100%;
+  }
+
+  &.loading {
+    box-shadow: 0 0px 0 var(--primary-color-extra-dark, orange) inset;
+    cursor: default;
+
+    .button-icon {
+      visibility: hidden;
+    }
+
+    .button-text {
+      visibility: hidden;
+    }
+
+    &:hover {
+      background: var(--primary-color, orange);
+    }
+  }
+
+  &.disabled {
+    cursor: default;
+    background: gray;
+    box-shadow: none;
+
+    .button-icon {
+      background: darken(gray, 15);
+    }
+  }
+
+  .button-flex {
+    display: flex;
+    position: relative;
+  }
+
+  .button-icon {
+    width: 30px;
+    height: 30px;
+    background: var(--primary-color-extra-dark, orange);
+    @include hv_center();
+  }
+
+  .button-text {
+    padding: 5px 10px;
+    flex: 1;
+    @include hv_center();
+  }
+
+  .loading-spinner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    @include hv_center();
+    animation: spin 2s infinite linear;
+  }
+}
