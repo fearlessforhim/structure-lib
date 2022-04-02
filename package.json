@@ -1,6 +1,6 @@
 {
   "name": "structure-lib",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A library of React components to provide unified style and structure for data-driven React applications",
   "main": "dist/index.js",
   "scripts": {
