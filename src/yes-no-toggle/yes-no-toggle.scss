@@ -45,4 +45,17 @@
       }
     }
   }
+
+  &.disabled {
+    border: 1px solid gray;
+    background: lighten(gray, 20);
+
+    .options-wrap .toggle-option {
+      cursor: default;
+    }
+
+    .selection-indicator-wrap .selection-indicator {
+      background: gray;
+    }
+  }
 }
