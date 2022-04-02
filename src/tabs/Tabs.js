@@ -14,7 +14,8 @@ export default function Tabs(props) {
           return (
             <div
               key={t.key}
-              className={`tab-item`}
+              className={`tab-item ${t.key === selectedTabKey ? `selected` : ``}`}
+              onClick={() => {setSelectedTabKey(t.key)}}
             >
               {t.title}
             </div>
