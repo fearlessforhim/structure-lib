@@ -5,6 +5,8 @@ export default function Tabs(props) {
 
   let [selectedTabKey, setSelectedTabKey] = useState(props.tabs[0].key);
 
+  let selectedTab = props.tabs.filter(t => t.key === selectedTabKey)[0];
+
   return (
     <div className={'structure-lib-tabs-wrap'}>
       <div
@@ -25,7 +27,7 @@ export default function Tabs(props) {
       <div
         className={`structure-lib-tabs-content-wrap`}
       >
-        {props.tabs.filter(t => t.key === selectedTabKey)[0].component}
+        {React.createElement(selectedTab.component, selectedTab.props)}
       </div>
     </div>
   );

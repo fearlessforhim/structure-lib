@@ -1,0 +1,70 @@
+@import "src/_bits/_mixins";
+
+.sl-input-wrap {
+  display: inline-block;
+
+  .sl-input-label {
+    font-size: 12px;
+  }
+
+  .sl-input-inner {
+    position: relative;
+
+    input {
+      border: 1px solid gray;
+      border-radius: none;
+      padding: 0 3px;
+      height: 28px;
+    }
+
+    .sl-input-actions {
+      position: absolute;
+      top: 1px;
+      right: 1px;
+      bottom: 1px;
+
+      .sl-input-action {
+        color: white;
+        background: var(--primary-color);
+        height: 100%;
+        width: 30px;
+        float: left;
+        cursor: pointer;
+        @include hv_center();
+
+        &:hover {
+          background: var(--primary-color-dark);
+        }
+
+        & + .sl-input-action {
+          border-left: 1px solid var(--primary-color-dark);
+        }
+
+        & + .sl-input-action.disabled {
+          border-left: 1px solid darken(gray, 10);
+        }
+
+        &.disabled {
+          background: gray;
+          cursor: default;
+
+          &:hover {
+            background: gray;
+          }
+        }
+
+        &.loading {
+          cursor: default;
+
+          &:hover {
+            background: var(--primary-color);
+          }
+
+          &:before {
+            animation: spin 2s infinite linear;
+          }
+        }
+      }
+    }
+  }
+}

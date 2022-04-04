@@ -1,7 +1,7 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 26:
+/***/ 377:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -11,6 +11,7 @@ __webpack_require__.r(__webpack_exports__);
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
   "Button": () => (/* reexport */ Button),
+  "SLInput": () => (/* reexport */ SLInput),
   "Tabs": () => (/* reexport */ Tabs),
   "YesNoToggle": () => (/* reexport */ YesNoToggle)
 });
@@ -207,6 +208,9 @@ function Tabs(props) {
       selectedTabKey = _useState2[0],
       setSelectedTabKey = _useState2[1];
 
+  var selectedTab = props.tabs.filter(function (t) {
+    return t.key === selectedTabKey;
+  })[0];
   return /*#__PURE__*/external_react_default().createElement("div", {
     className: 'structure-lib-tabs-wrap'
   }, /*#__PURE__*/external_react_default().createElement("div", {
@@ -221,11 +225,69 @@ function Tabs(props) {
     }, t.title);
   })), /*#__PURE__*/external_react_default().createElement("div", {
     className: "structure-lib-tabs-content-wrap"
-  }, props.tabs.filter(function (t) {
-    return t.key === selectedTabKey;
-  })[0].component));
+  }, /*#__PURE__*/external_react_default().createElement(selectedTab.component, selectedTab.props)));
+}
+// EXTERNAL MODULE: ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./inputs/sl-input.scss
+var sl_input = __webpack_require__(426);
+;// CONCATENATED MODULE: ./inputs/sl-input.scss
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var sl_input_options = {};
+
+sl_input_options.styleTagTransform = (styleTagTransform_default());
+sl_input_options.setAttributes = (setAttributesWithoutAttributes_default());
+
+      sl_input_options.insert = insertBySelector_default().bind(null, "head");
+    
+sl_input_options.domAPI = (styleDomAPI_default());
+sl_input_options.insertStyleElement = (insertStyleElement_default());
+
+var sl_input_update = injectStylesIntoStyleTag_default()(sl_input/* default */.Z, sl_input_options);
+
+
+
+
+       /* harmony default export */ const inputs_sl_input = (sl_input/* default */.Z && sl_input/* default.locals */.Z.locals ? sl_input/* default.locals */.Z.locals : undefined);
+
+;// CONCATENATED MODULE: ./inputs/SLInput.js
+
+
+function SLInput(props) {
+  return /*#__PURE__*/external_react_default().createElement("div", {
+    className: "sl-input-wrap"
+  }, props.label && /*#__PURE__*/external_react_default().createElement("div", {
+    className: 'sl-input-label'
+  }, props.label), /*#__PURE__*/external_react_default().createElement("div", {
+    className: "sl-input-inner"
+  }, /*#__PURE__*/external_react_default().createElement("input", {
+    value: props.value,
+    onChange: function onChange(e) {
+      if (props.onChange) {
+        props.onChange(e.target.value);
+      }
+    }
+  }), /*#__PURE__*/external_react_default().createElement("div", {
+    className: "sl-input-actions"
+  }, props.actions.map(function (a) {
+    return /*#__PURE__*/external_react_default().createElement("div", {
+      key: (0,external_react_.useId)(),
+      title: a.title,
+      className: "sl-input-action fa ".concat(a.loading ? "loading fa-spinner" : a.icon, " ").concat(a.disabled || !a.onClick ? "disabled" : ""),
+      onClick: a.disabled || a.loading ? null : a.onClick
+    });
+  }))));
 }
 ;// CONCATENATED MODULE: ./index.js
+
 
 
 
@@ -254,6 +316,29 @@ console.log(window.React2);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, "@keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}.structure-lib-button-wrap{background:var(--primary-color, orange);box-shadow:0 -3px 0 var(--primary-color-extra-dark, orange) inset;color:#fff;height:30px;display:inline-block;cursor:pointer;transition:box-shadow 1s}.structure-lib-button-wrap:hover{background:var(--primary-color-extra-dark, orange)}.structure-lib-button-wrap.full-width{width:100%}.structure-lib-button-wrap.loading{box-shadow:0 0px 0 var(--primary-color-extra-dark, orange) inset;cursor:default}.structure-lib-button-wrap.loading .button-icon{visibility:hidden}.structure-lib-button-wrap.loading .button-text{visibility:hidden}.structure-lib-button-wrap.loading:hover{background:var(--primary-color, orange)}.structure-lib-button-wrap.disabled{cursor:default;background:gray;box-shadow:none}.structure-lib-button-wrap.disabled .button-icon{background:#5a5a5a}.structure-lib-button-wrap .button-flex{display:flex;position:relative}.structure-lib-button-wrap .button-icon{width:30px;height:30px;background:var(--primary-color-extra-dark, orange);display:flex;box-sizing:border-box;text-align:center;justify-content:center;align-items:center}.structure-lib-button-wrap .button-text{padding:5px 10px;flex:1;display:flex;box-sizing:border-box;text-align:center;justify-content:center;align-items:center}.structure-lib-button-wrap .loading-spinner{position:absolute;top:0;left:0;right:0;bottom:0;display:flex;box-sizing:border-box;text-align:center;justify-content:center;align-items:center;animation:spin 2s infinite linear}", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ 426:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(933);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(476);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "@keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}.sl-input-wrap{display:inline-block}.sl-input-wrap .sl-input-label{font-size:12px}.sl-input-wrap .sl-input-inner{position:relative}.sl-input-wrap .sl-input-inner input{border:1px solid gray;border-radius:none;padding:0 3px;height:28px}.sl-input-wrap .sl-input-inner .sl-input-actions{position:absolute;top:1px;right:1px;bottom:1px}.sl-input-wrap .sl-input-inner .sl-input-actions .sl-input-action{color:#fff;background:var(--primary-color);height:100%;width:30px;float:left;cursor:pointer;display:flex;box-sizing:border-box;text-align:center;justify-content:center;align-items:center}.sl-input-wrap .sl-input-inner .sl-input-actions .sl-input-action:hover{background:var(--primary-color-dark)}.sl-input-wrap .sl-input-inner .sl-input-actions .sl-input-action+.sl-input-action{border-left:1px solid var(--primary-color-dark)}.sl-input-wrap .sl-input-inner .sl-input-actions .sl-input-action+.sl-input-action.disabled{border-left:1px solid #676767}.sl-input-wrap .sl-input-inner .sl-input-actions .sl-input-action.disabled{background:gray;cursor:default}.sl-input-wrap .sl-input-inner .sl-input-actions .sl-input-action.disabled:hover{background:gray}.sl-input-wrap .sl-input-inner .sl-input-actions .sl-input-action.loading{cursor:default}.sl-input-wrap .sl-input-inner .sl-input-actions .sl-input-action.loading:hover{background:var(--primary-color)}.sl-input-wrap .sl-input-inner .sl-input-actions .sl-input-action.loading:before{animation:spin 2s infinite linear}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1536,7 +1621,7 @@ module.exports = require("react");
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module is referenced by other modules so it can't be inlined
 /******/ 	__webpack_require__(248);
-/******/ 	var __webpack_exports__ = __webpack_require__(26);
+/******/ 	var __webpack_exports__ = __webpack_require__(377);
 /******/ 	module.exports = __webpack_exports__;
 /******/ 	
 /******/ })()
