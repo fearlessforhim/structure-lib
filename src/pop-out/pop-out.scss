@@ -1,0 +1,117 @@
+@import 'src/_bits/_mixins';
+
+.pop-out-parent {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0,0,0, .5);
+
+  &.open {
+    display: block;
+  }
+
+  .pop-out-wrap {
+    width: 600px;
+    margin: 100px auto;
+
+    .pop-out-header {
+      position: relative;
+      background: var(--primary-color);
+      border-bottom: 3px var(--primary-color-dark, orange) solid;
+
+      .pop-out-title {
+        color: white;
+        padding: 10px;
+      }
+
+      .pop-out-header-actions {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+
+        .pop-out-header-action {
+          height: 100%;
+          color: white;
+          width: 38px;
+          cursor: pointer;
+          @include hv_center();
+
+          &:hover {
+            background: var(--primary-color-dark);
+          }
+        }
+      }
+    }
+
+    .pop-out-content {
+      background: var(--panel-background, orange);
+
+      &.with-pad {
+        padding: 10px;
+      }
+    }
+
+    .pop-out-actions {
+      background: var(--panel-background-dark, orange);
+      height: 38px;
+      display: flex;
+
+      .pop-out-action {
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        padding: 10px;
+        color: white;
+        background: var(--primary-color);
+        min-width: 100px;
+        height: 100%;
+        @include hv_center();
+
+        & + .pop-out-action {
+          border-left: 1px solid var(--primary-color-dark);
+        }
+
+        &:hover {
+          background: var(--primary-color-dark);
+        }
+
+        &.loading {
+          cursor: default;
+
+          .action-text {
+            visibility: hidden;
+          }
+
+          &:hover {
+            background: var(--primary-color);
+          }
+        }
+
+        &.disabled {
+          background: var(--panel-background-extra-dark, orange);
+          cursor: default;
+          &:hover {
+            background: var(--panel-background-extra-dark, orange);
+          }
+        }
+
+        .loading-spinner {
+          position: absolute;
+          top: 0;
+          right: 0;
+          left: 0;
+          bottom: 0;
+          @include hv_center();
+
+          &:before {
+            animation: 2s spin infinite linear;
+          }
+        }
+      }
+    }
+  }
+}
