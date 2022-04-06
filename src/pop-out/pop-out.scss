@@ -49,6 +49,7 @@
 
     .pop-out-content {
       background: var(--panel-background, orange);
+      position: relative;
 
       &.with-pad {
         padding: 10px;

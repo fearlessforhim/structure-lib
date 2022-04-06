@@ -16,7 +16,10 @@ export default forwardRef(function PopOut(props, ref) {
 
   return (
     <div
-      className={`pop-out-parent ${isOpen ? `open` : ``}`}
+      className={`pop-out-parent
+        ${isOpen ? `open` : ``}
+        ${props.className || ''}
+        `}
     >
       <div
         className={`pop-out-wrap`}

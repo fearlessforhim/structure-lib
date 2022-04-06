@@ -4,6 +4,7 @@ import Tabs from './tabs/Tabs.js';
 import SLInput from './inputs/SLInput.js';
 import PopOut from './pop-out/PopOut.js';
 import Table from './table/SLTable.js';
+import Wizard from './wizard/Wizard.js'
 
 export {
   Button,
@@ -11,5 +12,6 @@ export {
   Tabs,
   SLInput,
   PopOut,
-  Table
+  Table,
+  Wizard
 };

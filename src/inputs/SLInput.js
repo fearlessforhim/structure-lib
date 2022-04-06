@@ -22,7 +22,7 @@ export default function SLInput(props) {
         <div
           className={`sl-input-actions`}
         >
-          {props.actions.map(a => {
+          {(props.actions || []).map(a => {
             return (
               <div
                 key={useId()}

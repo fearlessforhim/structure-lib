@@ -1,0 +1,29 @@
+@import 'src/_bits/_mixins';
+
+.wizard-modal {
+  .validation-error {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #830404;
+    padding: 5px;
+    color: white;
+    font-style: italic;
+
+    &.error {
+      display: block;
+    }
+
+    .error-close-icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 28px;
+      @include hv_center();
+      cursor: pointer;
+    }
+  }
+}
