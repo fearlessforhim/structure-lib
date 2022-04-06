@@ -1,0 +1,103 @@
+@import 'src/_bits/_mixins';
+
+.sl-table-parent {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+
+  .sl-table-header {
+    background: var(--panel-background-dark);
+    display: flex;
+    margin-right: 8px;
+    border-bottom: 2px solid var(--panel-background-extra-dark, orange);
+
+    .sl-table-header-item {
+      padding: 3px 5px;
+      cursor: pointer;
+      position: relative;
+
+      &-text {}
+
+      & + .sl-table-header-item {
+        border-left: 1px solid var(--panel-background-extra-dark);
+      }
+
+      &:hover {
+        background: var(--panel-background-extra-dark);
+      }
+
+      .sorted {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 24px;
+
+        &:before {
+          height: 100%;
+          @include hv_center();
+        }
+      }
+    }
+  }
+
+  .sl-table-body {
+    flex: 1;
+    background: var(--panel-background);
+    overflow: scroll;
+
+    &::-webkit-scrollbar {
+      background: lightgray;
+      width: 8px;
+      height: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--primary-color);
+    }
+
+    &.with-summary {
+      padding-bottom: 25px;
+    }
+
+    .sl-table-row {
+      display: flex;
+      background: var(--panel-background);
+
+      .sl-table-column-item {
+        padding: 3px;
+
+        & + .sl-table-column-item {
+          border-left: 1px solid var(--panel-background-extra-dark);
+        }
+      }
+
+      &.alt {
+        background: var(--panel-background-dark);
+      }
+
+      & + .sl-table-row {
+        border-top: 1px solid var(--panel-background-extra-dark);
+      }
+    }
+  }
+
+  .summary-row {
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    right: 8px;
+    background: red;
+    display: flex;
+    background: var(--panel-background-dark);
+    border-top: 1px solid var(--panel-background-extra-dark);
+
+    .summary-row-item {
+      padding: 3px;
+      & + .summary-row-item {
+        border-left: 1px solid var(--panel-background-extra-dark);
+      }
+    }
+  }
+}

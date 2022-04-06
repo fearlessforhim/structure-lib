@@ -33,5 +33,6 @@
   .structure-lib-tabs-content-wrap {
     flex: 1;
     border: 1px solid var(--primary-color-extra-dark, orange);
+    overflow: auto;
   }
 }

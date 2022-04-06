@@ -3,7 +3,7 @@ import './tabs.scss'
 
 export default function Tabs(props) {
 
-  let [selectedTabKey, setSelectedTabKey] = useState(props.tabs[0].key);
+  let [selectedTabKey, setSelectedTabKey] = useState(props.selectedTabKey || props.tabs[0].key);
 
   let selectedTab = props.tabs.filter(t => t.key === selectedTabKey)[0];
 
